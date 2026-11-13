@@ -49,3 +49,29 @@ Thumbs.db
 node_modules/
 frontend/dist/
 *.tsbuildinfo
+
+# Local career notes and internal publication records
+/docs/RESUME_PROJECT.md
+/docs/RESUME_AFTER_COMPLETION.md
+/docs/INTERVIEW_GUIDE.md
+/docs/DEMO_SCRIPT.md
+/docs/P0_RESUME.md
+/docs/GITHUB_FINAL_RELEASE_REPORT.md
+/docs/GITHUB_PUBLIC_FILES.md
+/docs/GITHUB_RELEASE_CHECKLIST.md
+/docs/GITHUB_PUBLISH_REPORT.md
+/docs/V2_FINAL_FILE_MANIFEST.md
+
+# Development archives remain on disk, outside the public working tree
+/prompts/
+/START_HERE_USER.md
+/docs/BASELINE_TESTS.md
+/docs/P2_UI_SPEC.md
+/docs/V2-01_DESIGN_SPEC.md
+/docs/V2-01-1_DESIGN_CHANGES.md
+/docs/*_ACCEPTANCE_REPORT.md
+!/docs/P0_ACCEPTANCE_REPORT.md
+/docs/UI_*.md
+!/docs/UI_CATEGORY_TRANSLATIONS.md
+/docs/screenshots/*
+!/docs/screenshots/showcase/
