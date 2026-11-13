@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retailscope"
+version = "0.1.0"
+description = "Reproducible Olist e-commerce data analysis portfolio project"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "python-dotenv>=1.0,<2",
+  "psycopg[binary]>=3.2,<4",
+  "pandas>=2.2,<3",
+  "sqlalchemy>=2.0,<3",
+  "streamlit>=1.67,<2",
+  "plotly>=6.0,<7",
+  "kagglehub>=0.3,<2",
+  "scipy>=1.14,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

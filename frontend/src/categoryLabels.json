@@ -1,0 +1,372 @@
+{
+  "__unknown__": {
+    "zh": "未分类",
+    "en": null,
+    "status": "missing"
+  },
+  "agro_industria_e_comercio": {
+    "zh": "农业与工商业用品",
+    "en": "agro_industry_and_commerce",
+    "status": "translated"
+  },
+  "alimentos": {
+    "zh": "食品",
+    "en": "food",
+    "status": "translated"
+  },
+  "alimentos_bebidas": {
+    "zh": "食品与饮料",
+    "en": "food_drink",
+    "status": "translated"
+  },
+  "artes": {
+    "zh": "艺术品",
+    "en": "art",
+    "status": "translated"
+  },
+  "artes_e_artesanato": {
+    "zh": "艺术与手工艺",
+    "en": "arts_and_craftmanship",
+    "status": "translated"
+  },
+  "artigos_de_festas": {
+    "zh": "派对用品",
+    "en": "party_supplies",
+    "status": "translated"
+  },
+  "artigos_de_natal": {
+    "zh": "圣诞用品",
+    "en": "christmas_supplies",
+    "status": "translated"
+  },
+  "audio": {
+    "zh": "音响设备",
+    "en": "audio",
+    "status": "translated"
+  },
+  "automotivo": {
+    "zh": "汽车用品",
+    "en": "auto",
+    "status": "translated"
+  },
+  "bebes": {
+    "zh": "母婴用品",
+    "en": "baby",
+    "status": "translated"
+  },
+  "bebidas": {
+    "zh": "饮料",
+    "en": "drinks",
+    "status": "translated"
+  },
+  "beleza_saude": {
+    "zh": "美容与健康",
+    "en": "health_beauty",
+    "status": "translated"
+  },
+  "brinquedos": {
+    "zh": "玩具",
+    "en": "toys",
+    "status": "translated"
+  },
+  "cama_mesa_banho": {
+    "zh": "床品、餐桌与卫浴用品",
+    "en": "bed_bath_table",
+    "status": "translated"
+  },
+  "casa_conforto": {
+    "zh": "家居舒适用品",
+    "en": "home_confort",
+    "status": "translated"
+  },
+  "casa_conforto_2": {
+    "zh": "家居舒适用品（二）",
+    "en": "home_comfort_2",
+    "status": "translated"
+  },
+  "casa_construcao": {
+    "zh": "家居建材",
+    "en": "home_construction",
+    "status": "translated"
+  },
+  "cds_dvds_musicais": {
+    "zh": "音乐光盘",
+    "en": "cds_dvds_musicals",
+    "status": "translated"
+  },
+  "cine_foto": {
+    "zh": "摄影与影像",
+    "en": "cine_photo",
+    "status": "translated"
+  },
+  "climatizacao": {
+    "zh": "空调与温控",
+    "en": "air_conditioning",
+    "status": "translated"
+  },
+  "consoles_games": {
+    "zh": "游戏机与游戏",
+    "en": "consoles_games",
+    "status": "translated"
+  },
+  "construcao_ferramentas_construcao": {
+    "zh": "建筑施工用品",
+    "en": "construction_tools_construction",
+    "status": "translated"
+  },
+  "construcao_ferramentas_ferramentas": {
+    "zh": "施工工具",
+    "en": "costruction_tools_tools",
+    "status": "translated"
+  },
+  "construcao_ferramentas_iluminacao": {
+    "zh": "建筑照明",
+    "en": "construction_tools_lights",
+    "status": "translated"
+  },
+  "construcao_ferramentas_jardim": {
+    "zh": "园艺施工用品",
+    "en": "costruction_tools_garden",
+    "status": "translated"
+  },
+  "construcao_ferramentas_seguranca": {
+    "zh": "施工安全用品",
+    "en": "construction_tools_safety",
+    "status": "translated"
+  },
+  "cool_stuff": {
+    "zh": "Cool Stuff",
+    "en": "cool_stuff",
+    "status": "preserved_name"
+  },
+  "dvds_blu_ray": {
+    "zh": "DVD与蓝光碟",
+    "en": "dvds_blu_ray",
+    "status": "translated"
+  },
+  "eletrodomesticos": {
+    "zh": "家用电器",
+    "en": "home_appliances",
+    "status": "translated"
+  },
+  "eletrodomesticos_2": {
+    "zh": "家用电器（二）",
+    "en": "home_appliances_2",
+    "status": "translated"
+  },
+  "eletronicos": {
+    "zh": "电子产品",
+    "en": "electronics",
+    "status": "translated"
+  },
+  "eletroportateis": {
+    "zh": "小家电",
+    "en": "small_appliances",
+    "status": "translated"
+  },
+  "esporte_lazer": {
+    "zh": "运动与休闲",
+    "en": "sports_leisure",
+    "status": "translated"
+  },
+  "fashion_bolsas_e_acessorios": {
+    "zh": "时尚箱包与配饰",
+    "en": "fashion_bags_accessories",
+    "status": "translated"
+  },
+  "fashion_calcados": {
+    "zh": "鞋靴",
+    "en": "fashion_shoes",
+    "status": "translated"
+  },
+  "fashion_esporte": {
+    "zh": "运动服饰",
+    "en": "fashion_sport",
+    "status": "translated"
+  },
+  "fashion_roupa_feminina": {
+    "zh": "女装",
+    "en": "fashio_female_clothing",
+    "status": "translated"
+  },
+  "fashion_roupa_infanto_juvenil": {
+    "zh": "儿童与青少年服装",
+    "en": "fashion_childrens_clothes",
+    "status": "translated"
+  },
+  "fashion_roupa_masculina": {
+    "zh": "男装",
+    "en": "fashion_male_clothing",
+    "status": "translated"
+  },
+  "fashion_underwear_e_moda_praia": {
+    "zh": "内衣与沙滩服饰",
+    "en": "fashion_underwear_beach",
+    "status": "translated"
+  },
+  "ferramentas_jardim": {
+    "zh": "园艺工具",
+    "en": "garden_tools",
+    "status": "translated"
+  },
+  "flores": {
+    "zh": "鲜花",
+    "en": "flowers",
+    "status": "translated"
+  },
+  "fraldas_higiene": {
+    "zh": "纸尿裤与卫生用品",
+    "en": "diapers_and_hygiene",
+    "status": "translated"
+  },
+  "industria_comercio_e_negocios": {
+    "zh": "工商业用品",
+    "en": "industry_commerce_and_business",
+    "status": "translated"
+  },
+  "informatica_acessorios": {
+    "zh": "电脑与配件",
+    "en": "computers_accessories",
+    "status": "translated"
+  },
+  "instrumentos_musicais": {
+    "zh": "乐器",
+    "en": "musical_instruments",
+    "status": "translated"
+  },
+  "la_cuisine": {
+    "zh": "La Cuisine",
+    "en": "la_cuisine",
+    "status": "preserved_name"
+  },
+  "livros_importados": {
+    "zh": "进口图书",
+    "en": "books_imported",
+    "status": "translated"
+  },
+  "livros_interesse_geral": {
+    "zh": "综合图书",
+    "en": "books_general_interest",
+    "status": "translated"
+  },
+  "livros_tecnicos": {
+    "zh": "技术图书",
+    "en": "books_technical",
+    "status": "translated"
+  },
+  "malas_acessorios": {
+    "zh": "旅行箱包与配件",
+    "en": "luggage_accessories",
+    "status": "translated"
+  },
+  "market_place": {
+    "zh": "综合集市",
+    "en": "market_place",
+    "status": "translated"
+  },
+  "moveis_colchao_e_estofado": {
+    "zh": "床垫与软体家具",
+    "en": "furniture_mattress_and_upholstery",
+    "status": "translated"
+  },
+  "moveis_cozinha_area_de_servico_jantar_e_jardim": {
+    "zh": "厨房、餐厅、洗衣区与花园家具",
+    "en": "kitchen_dining_laundry_garden_furniture",
+    "status": "translated"
+  },
+  "moveis_decoracao": {
+    "zh": "家具与装饰",
+    "en": "furniture_decor",
+    "status": "translated"
+  },
+  "moveis_escritorio": {
+    "zh": "办公家具",
+    "en": "office_furniture",
+    "status": "translated"
+  },
+  "moveis_quarto": {
+    "zh": "卧室家具",
+    "en": "furniture_bedroom",
+    "status": "translated"
+  },
+  "moveis_sala": {
+    "zh": "客厅家具",
+    "en": "furniture_living_room",
+    "status": "translated"
+  },
+  "musica": {
+    "zh": "音乐用品",
+    "en": "music",
+    "status": "translated"
+  },
+  "papelaria": {
+    "zh": "文具",
+    "en": "stationery",
+    "status": "translated"
+  },
+  "pc_gamer": {
+    "zh": "游戏电脑",
+    "en": null,
+    "status": "supplemental"
+  },
+  "pcs": {
+    "zh": "电脑",
+    "en": "computers",
+    "status": "translated"
+  },
+  "perfumaria": {
+    "zh": "香水与香氛",
+    "en": "perfumery",
+    "status": "translated"
+  },
+  "pet_shop": {
+    "zh": "宠物用品",
+    "en": "pet_shop",
+    "status": "translated"
+  },
+  "portateis_casa_forno_e_cafe": {
+    "zh": "家用烤箱与咖啡小电器",
+    "en": "small_appliances_home_oven_and_coffee",
+    "status": "translated"
+  },
+  "portateis_cozinha_e_preparadores_de_alimentos": {
+    "zh": "厨房便携器具与食品处理设备",
+    "en": null,
+    "status": "supplemental"
+  },
+  "relogios_presentes": {
+    "zh": "钟表与礼品",
+    "en": "watches_gifts",
+    "status": "translated"
+  },
+  "seguros_e_servicos": {
+    "zh": "Seguros e Serviços",
+    "en": "security_and_services",
+    "status": "preserved_name"
+  },
+  "sinalizacao_e_seguranca": {
+    "zh": "标识与安全用品",
+    "en": "signaling_and_security",
+    "status": "translated"
+  },
+  "tablets_impressao_imagem": {
+    "zh": "平板、打印与成像设备",
+    "en": "tablets_printing_image",
+    "status": "translated"
+  },
+  "telefonia": {
+    "zh": "通信设备",
+    "en": "telephony",
+    "status": "translated"
+  },
+  "telefonia_fixa": {
+    "zh": "固定电话",
+    "en": "fixed_telephony",
+    "status": "translated"
+  },
+  "utilidades_domesticas": {
+    "zh": "家居日用品",
+    "en": "housewares",
+    "status": "translated"
+  }
+}

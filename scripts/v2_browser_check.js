@@ -1,0 +1,80 @@
+async(page)=>{
+  const result={}; const errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.setViewportSize({width:1440,height:1000});
+  await page.route('**/api/overview?*',async route=>{await new Promise(r=>setTimeout(r,800));await route.continue()});
+  await page.reload();
+  await page.getByLabel('正在加载经营数据').waitFor();
+  result.loading_visible=true;
+  await page.getByTestId('kpi-0').waitFor();
+  await page.unroute('**/api/overview?*');
+  const full=await (await page.request.get('http://127.0.0.1:5173/api/overview')).json();
+  const expected=['BRL 13,221,498.11','96,478','93,358','BRL 137.04'];
+  const metrics=async()=>Promise.all([0,1,2,3].map(i=>page.getByTestId(`kpi-${i}`).innerText()));
+  result.default_kpis=await metrics();
+  if(JSON.stringify(result.default_kpis)!==JSON.stringify(expected))throw new Error('Default KPI mismatch');
+  await page.getByRole('img',{name:'月度商品成交额与订单趋势',exact:true}).locator('svg').waitFor();
+  result.sizes=[];
+  for(const [width,height] of [[1440,1000],[1280,900]]){
+    await page.setViewportSize({width,height});await page.waitForTimeout(350);
+    await page.evaluate(()=>window.scrollTo(0,0));
+    const bounds=await page.evaluate(()=>({horizontalOverflow:document.documentElement.scrollWidth>innerWidth,
+      clippedKpi:Array.from(document.querySelectorAll('.kpi-value')).some(el=>el.scrollWidth>el.clientWidth),
+      svgCharts:document.querySelectorAll('[role="img"] svg').length,
+      trendBottom:document.querySelector('.trend-panel').getBoundingClientRect().bottom}));
+    if(bounds.horizontalOverflow||bounds.clippedKpi||bounds.svgCharts!==2)throw new Error('Layout overflow or missing real chart');
+    result.sizes.push({width,height,...bounds});
+    await page.screenshot({path:`docs/screenshots/v2-01/overview-${width}.png`});
+    await page.screenshot({path:`docs/screenshots/v2-01/overview-${width}-full.png`,fullPage:true});
+  }
+  await page.setViewportSize({width:1440,height:1000});
+  await page.getByRole('button',{name:'查看全部地区',exact:true}).click();
+  result.all_region_rows=await page.locator('.region-row').count();
+  if(result.all_region_rows!==full.regions.length)throw new Error('Region table mismatch');
+  await page.getByRole('button',{name:'收起地区',exact:true}).click();
+  await page.getByLabel('开始日期',{exact:true}).fill('2017-05-10');
+  await page.getByLabel('结束日期',{exact:true}).fill('2017-06-20');
+  await page.getByLabel('客户州',{exact:true}).selectOption('SP');
+  if(!await page.getByText('更改待应用',{exact:true}).isVisible())throw new Error('Draft scope must be explicit');
+  result.unapplied_filter_keeps_existing_kpis=JSON.stringify(await metrics())===JSON.stringify(expected);
+  const response=page.waitForResponse(r=>r.url().includes('/api/overview?start=2017')&&r.status()===200);
+  await page.getByRole('button',{name:'应用筛选',exact:true}).click();
+  const filtered=await (await response).json();
+  await page.getByTestId('kpi-0').waitFor();
+  result.filtered_scope=filtered.scope;result.filtered_kpis=await metrics();
+  const amount=`BRL ${Number(filtered.kpis.merchandise).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}`;
+  if(result.filtered_kpis[0]!==amount||result.filtered_kpis[1]!==filtered.kpis.orders.toLocaleString('en-US'))throw new Error('Filtered UI/API mismatch');
+  await page.getByLabel('导出内容',{exact:true}).selectOption('monthly');
+  const event=page.waitForEvent('download');
+  await page.getByRole('button',{name:'导出 CSV',exact:true}).click();
+  const csv=await event;await csv.saveAs('reports/v2-01/browser-filtered-monthly.csv');
+  result.csv_filename=csv.suggestedFilename();
+  await page.evaluate(()=>window.scrollTo(0,0));
+  await page.screenshot({path:'docs/screenshots/v2-01/filtered-overview.png'});
+  await page.getByLabel('结束日期',{exact:true}).fill('2020-01-02');
+  await page.getByLabel('开始日期',{exact:true}).fill('2020-01-01');
+  await page.getByRole('button',{name:'应用筛选',exact:true}).click();
+  await page.getByText('当前范围没有有效订单',{exact:true}).waitFor();
+  result.empty_kpis=await metrics();
+  if(result.empty_kpis[1]!=='0'||result.empty_kpis[3]!=='—')throw new Error('Empty metrics wrong');
+  await page.screenshot({path:'output/playwright/v2-01/empty-state.png'});
+  await page.getByRole('button',{name:'重置',exact:true}).click();
+  await page.waitForFunction(()=>document.querySelector('[data-testid="kpi-0"]')?.textContent==='BRL 13,221,498.11');
+  result.reset_restores_baseline=true;
+  await page.getByRole('button',{name:'关键经营发现',exact:true}).click();
+  await page.locator('.finding').nth(6).waitFor();
+  result.findings_count=await page.locator('.finding').count();
+  if(result.findings_count!==7)throw new Error('P3 findings missing');
+  await page.screenshot({path:'docs/screenshots/v2-01/findings-entry.png'});
+  await page.keyboard.press('Escape');
+  await page.getByLabel('开始日期',{exact:true}).fill('2018-01-01');
+  await page.getByLabel('结束日期',{exact:true}).fill('2017-01-01');
+  await page.getByRole('button',{name:'应用筛选',exact:true}).click();
+  result.invalid_range_chinese_message=await page.getByText('开始日期不能晚于结束日期，请调整后再应用。',{exact:true}).isVisible();
+  if(!result.invalid_range_chinese_message)throw new Error('Invalid range message missing');
+  await page.getByRole('button',{name:'重置',exact:true}).click();
+  await page.waitForFunction(()=>document.querySelector('[data-testid="kpi-0"]')?.textContent==='BRL 13,221,498.11');
+  await page.evaluate(()=>window.scrollTo(0,0));
+  result.page_errors=errors;
+  return result;
+}

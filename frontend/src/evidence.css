@@ -1,0 +1,291 @@
+/* V2-03 additive evidence components; the four existing pages and frozen tokens are unchanged. */
+.method-content { padding-top: 12px; font-size: 13px; line-height: 1.9; color: #535b69; }
+.metric-notes { margin-block: 12px; }
+.finding-card > .finding-meaning { padding: 0 22px 14px; font-size: 14px; line-height: 1.8; color: #535b69; }
+.evidence-page
+  .data-table-scroll:has(table[aria-label="九张原始表当前与历史记录数"]) {
+  max-height: none;
+}
+.findings-overview {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  margin: 24px 0 14px;
+}
+.findings-overview h2 {
+  font-size: 16px;
+}
+.findings-overview p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #565d69;
+  margin-top: 6px;
+}
+.findings-overview > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.findings-overview label,
+.findings-overview select,
+.quality-field-filter {
+  font-size: 14px;
+}
+.findings-overview select,
+.quality-field-filter select {
+  border: 1px solid #d9dce3;
+  border-radius: 6px;
+  background: #fff;
+  height: 36px;
+  padding: 5px 10px;
+  color: #414956;
+}
+.evidence-provenance,
+.findings-count {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #626771;
+  margin: 10px 0;
+}
+.finding-card {
+  border: 1px solid #e0e2e8;
+  border-radius: 9px;
+  margin: 20px 0;
+  overflow: hidden;
+  scroll-margin-top: 20px;
+}
+.finding-card > header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 21px 22px 12px;
+}
+.finding-card h2 {
+  font-size: 16px;
+}
+.finding-card header > span:last-child:not([data-slot]) {
+  margin-left: auto;
+  font-size: 12px;
+  color: #5145ac;
+}
+.priority-finding > header {
+  background: #fcfbfe;
+}
+.finding-result {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #303743;
+  padding: 8px 22px;
+}
+.finding-sample {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #565d69;
+  padding: 4px 22px 12px;
+}
+.finding-meta {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 7px 14px;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+  padding: 5px 22px 18px;
+}
+.finding-meta dt {
+  color: #626771;
+}
+.finding-meta dd {
+  margin: 0;
+  color: #384251;
+  overflow-wrap: anywhere;
+}
+.finding-explanation {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding: 20px 22px;
+  background: #fcfcfd;
+  border-top: 1px solid #eeeef2;
+}
+.finding-explanation h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #384251;
+}
+.finding-explanation p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #535b69;
+  margin-top: 6px;
+}
+.evidence-details {
+  border-top: 1px solid #eeeef2;
+  padding: 14px 22px;
+}
+.evidence-details summary {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  color: #5145ac;
+  cursor: pointer;
+  list-style-position: inside;
+}
+.evidence-details pre {
+  font-size: 12px;
+  line-height: 1.8;
+  background: #fafafb;
+  padding: 15px;
+  border: 1px solid #eeeef2;
+  border-radius: 6px;
+  max-height: 420px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 14px 0 0;
+}
+.ci-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-block: 1px solid #eeeef2;
+  padding: 20px 22px;
+  gap: 18px;
+}
+.ci-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.ci-summary span {
+  font-size: 13px;
+  color: #565d69;
+}
+.ci-summary strong {
+  font-size: 24px;
+  color: #5145ac;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.association-proof .panel-bottom {
+  margin: 0;
+}
+.trust-status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  border: 1px solid #e0e2e8;
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+.trust-status > div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.trust-status strong {
+  font-size: 16px;
+  font-weight: 550;
+}
+.trust-status span:not([data-slot]) {
+  font-size: 12px;
+  color: #626771;
+  overflow-wrap: anywhere;
+}
+.quality-intro {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #535b69;
+  padding: 6px 22px 14px;
+  overflow-wrap: anywhere;
+}
+.quality-intro a {
+  color: #5145ac;
+  text-decoration: underline;
+}
+.source-evidence {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
+  color: #626771;
+  padding: 8px 22px 15px;
+  line-height: 1.8;
+}
+.source-evidence > span:not([data-slot]) {
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+.source-evidence details {
+  width: 100%;
+}
+.source-evidence summary {
+  cursor: pointer;
+  color: #5145ac;
+}
+.source-evidence code {
+  overflow-wrap: anywhere;
+}
+.quality-field-filter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 18px 22px;
+  border-top: 1px solid #eeeef2;
+}
+.quality-field-filter label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.quality-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 20px 22px 13px;
+}
+.warehouse-layers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 4px 22px 20px;
+}
+.warehouse-layers > section {
+  border: 1px solid #e6e7eb;
+  border-radius: 7px;
+  padding: 16px;
+  min-width: 0;
+}
+.warehouse-layers h3 {
+  font-size: 15px;
+  color: #5145ac;
+}
+.warehouse-layers p {
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 7px;
+  color: #535b69;
+}
+.warehouse-layers span {
+  display: block;
+  font-size: 12px;
+  margin-top: 9px;
+  color: #626771;
+}
+@media (max-width: 1300px) {
+  .findings-overview {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .ci-summary strong {
+    font-size: 22px;
+  }
+  .finding-card > header {
+    flex-wrap: wrap;
+  }
+}
