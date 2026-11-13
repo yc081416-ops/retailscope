@@ -134,7 +134,7 @@ npm --prefix frontend test
 npm --prefix frontend run build
 ```
 
-完整执行 **144 项 Pytest、28 项 Vitest**，类型检查和生产构建通过。覆盖 JOIN 防重复计数、指标一致性、RFM / Cohort、统计区间、筛选、导出和边界状态。运行证据与复现范围见 [发布检查](docs/GITHUB_FINAL_RELEASE_REPORT.md)。首次安装流程已提供，本轮未在全新电脑重新验证。
+测试包括 **144 项 Pytest、28 项 Vitest**，覆盖 JOIN 防重复计数、指标一致性、RFM / Cohort、统计区间、筛选、导出和边界状态，并提供 TypeScript 类型检查与生产构建检查。
 
 ## 数据来源与许可
 
@@ -142,8 +142,4 @@ npm --prefix frontend run build
 
 项目作者拥有权利的原创代码采用 [MIT License](LICENSE)，版权署名为 `Copyright (c) 2026 [yan]`。MIT 不覆盖第三方库、引用组件、Olist 原始数据及受其他许可约束的内容；依赖和组件保留各自的版权与许可，见 [第三方许可](docs/THIRD_PARTY_LICENSES.md)。
 
-数据相关报告、聚合结果和截图继续保留 CC BY-NC-SA 4.0 来源与要求；混合材料的具体适用范围列为 [待审查项](docs/DATA_LICENSE.md#混合材料的适用范围)，不将整个仓库统一标为 MIT。原始 CSV、用户级导出、数据库备份和本地凭证不随公开仓库分发，运行时通过官方下载流程准备数据。
-
-## 项目材料
-
-[简历项目描述](docs/RESUME_PROJECT.md) · [面试问答](docs/INTERVIEW_GUIDE.md) · [演示脚本](docs/DEMO_SCRIPT.md) · [公开文件清单](docs/GITHUB_PUBLIC_FILES.md)
+数据相关报告、聚合结果和截图继续保留 CC BY-NC-SA 4.0 来源与要求；混合材料的具体适用范围见 [数据许可说明](docs/DATA_LICENSE.md#混合材料的适用范围)。原始 CSV、用户级导出、数据库备份和本地凭证不随公开仓库分发，运行时通过官方下载流程准备数据。
